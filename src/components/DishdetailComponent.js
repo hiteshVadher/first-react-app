@@ -34,7 +34,7 @@ class DishDetail extends Component {
                     <div key={eachComment.id} className="mb-3">
                         <li className="unstyled-list">{eachComment.comment}</li>
                         <span>-- {eachComment.author}, </span> 
-                        <span>{eachComment.date}</span>
+                        <span>{new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(eachComment.date)))}</span>
                     </div>
                 );
             });
@@ -56,12 +56,14 @@ class DishDetail extends Component {
             );
         } else {
             return (
-                <div className="row justify-content-center">
-                    <div className="col-12 col-md-5 m-1">
-                        {this.renderDish(selectedDish)}
-                    </div>
-                    <div className="col-12 col-md-5 m-1">
-                        {this.renderComments(selectedDish.comments)}
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-12 col-md-5 m-1">
+                            {this.renderDish(selectedDish)}
+                        </div>
+                        <div className="col-12 col-md-5 m-1">
+                            {this.renderComments(selectedDish.comments)}
+                        </div>
                     </div>
                 </div>
             );
