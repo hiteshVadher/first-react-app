@@ -49,7 +49,7 @@ const DishDetail = (props) => {
     } else {
         return (
             <div className="container">
-                <div className="row justify-content-center">
+                <div className="row">
                     <div className="col-12 col-md-5 m-1">
                         <RenderDish dish={selectedDish} />
                     </div>

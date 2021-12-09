@@ -25,7 +25,7 @@ const Menu = (props) => {
 
     return (
         <div className="container">
-            <div className="row justify-content-center">
+            <div className="row">
                 {menu}
             </div>
         </div>
