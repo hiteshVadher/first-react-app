@@ -6,7 +6,7 @@ import Contact from './ContactComponent';
 import Menu from './MenuComponents';
 import About from './AboutComponent';
 import DishDetail from './DishdetailComponent';
-import { Route, Routes, Navigate, withRouter } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
@@ -55,4 +55,4 @@ class Main extends Component {
     }
 }
 
-export default withRouter(connect(mapStateToProps)(Main));
+export default connect(mapStateToProps)(Main);
