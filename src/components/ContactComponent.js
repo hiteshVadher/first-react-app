@@ -72,7 +72,7 @@ class Contact extends React.Component {
                                 <Col md={10}>
                                     <Control.text model=".firstname" id="firstname" name="firstname"
                                         placeholder="First Name"
-                                        className = "from-control"
+                                        className = "form-control"
                                         validators={{
                                             required, minLength: minLength(3), maxLength: maxLength(15)
                                         }}/>
@@ -93,7 +93,7 @@ class Contact extends React.Component {
                                 <Col md={10}>
                                     <Control.text model=".lastname" id="lastname" name="lastname"
                                         placeholder="Last Name"
-                                        className = "from-control" 
+                                        className = "form-control" 
                                         validators={{
                                             required, minLength: minLength(3), maxLength: maxLength(15)
                                         }}/>
@@ -114,7 +114,7 @@ class Contact extends React.Component {
                                 <Col md={10}>
                                     <Control.text model=".telnum" id="telnum" name="telnum"
                                         placeholder="Tel. Number"
-                                        className = "from-control"
+                                        className = "form-control"
                                         validators={{
                                             required, minLength: minLength(3), maxLength: maxLength(15), isNumber
                                         }}/>
@@ -136,7 +136,7 @@ class Contact extends React.Component {
                                 <Col md={10}>
                                     <Control.text model=".email" id="email" name="email"
                                         placeholder="Email"
-                                        className = "from-control" 
+                                        className = "form-control" 
                                         validators={{
                                             required, validEmail
                                         }}/>
