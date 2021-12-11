@@ -26,9 +26,11 @@ class Main extends Component {
 
     render() {
         const DishWithId = ({match}) => {
+            let val = window.location.href;
+            val = val[val.length-1];
             return(
-                <DishDetail dish={this.props.dishes.filter((dish) => dish.id === parseInt(match.params.dishId, 10))[0]}
-                    comments={this.props.comments.filter((comment) => comment.dishId === parseInt(match.params.dishId, 10))}
+                <DishDetail dish={this.props.dishes.filter((dish) => dish.id === parseInt(val, 10))[0]}
+                    comments={this.props.comments.filter((comment) => comment.dishId === parseInt(val, 10))}
                 />
             );
         }
