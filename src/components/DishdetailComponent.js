@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
-import { FadeTransform, Fade, stagger } from 'react-animation-components';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 
 const required = (val) => val && val.length;
@@ -38,18 +38,22 @@ function RenderComments({comments, postComment, dishId}) {
 
         const comment = comments.map((eachComment) => {
             return (
-                <div key={eachComment.id} className="mb-3">
-                    <li className="unstyled-list">{eachComment.comment}</li>
-                    <span>-- {eachComment.author}, </span> 
-                    <span>{new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(eachComment.date)))}</span>
-                </div>
+                <Fade in>
+                    <div key={eachComment.id} className="mb-3">
+                        <li className="unstyled-list">{eachComment.comment}</li>
+                        <span>-- {eachComment.author}, </span> 
+                        <span>{new Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(eachComment.date)))}</span>
+                    </div>
+                </Fade>
             );
         });
 
         return(
             <div>
                 <h4>Comments</h4>
-                {comment}
+                <Stagger in>
+                    {comment}
+                </Stagger>
                 <CommentForm dishId={dishId} postComment={postComment}></CommentForm>
             </div>
         );
