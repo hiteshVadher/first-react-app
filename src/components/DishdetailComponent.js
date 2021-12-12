@@ -93,20 +93,20 @@ class CommentForm extends Component {
                             <Row className="form-group">
                                 <Col className='col-12'>
                                     <Label htmlFor="rating">Rating</Label>
-                                    <Control.select model=".rating" name="rating"
+                                    <Control.Select model=".rating" name="rating"
                                         className="form-control" >
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
                                         <option>4</option>
                                         <option>5</option>
-                                    </Control.select>
+                                    </Control.Select>
                                 </Col>
                             </Row>
                             <Row className="form-group">
                                 <Col className="col-12">
                                     <Label htmlFor="yourname">Your Name</Label>
-                                    <Control.text model=".yourname" id="yourname" name="yourname"
+                                    <Control.Text model=".yourname" id="yourname" name="yourname"
                                         placeholder="Your Name"
                                         className = "form-control"
                                         validators={{
@@ -127,7 +127,7 @@ class CommentForm extends Component {
                             <Row className="form-group">
                                 <Col className="col-12">
                                     <Label htmlFor="comment">Comment</Label>
-                                    <Control.textarea model=".comment" id="comment" name="comment"
+                                    <Control.Textarea model=".comment" id="comment" name="comment"
                                         className="form-control" rows="6"/>
                                 </Col>
                             </Row>
