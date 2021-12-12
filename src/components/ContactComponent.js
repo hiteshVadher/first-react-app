@@ -70,7 +70,7 @@ class Contact extends React.Component {
                             <Row className="form-group">
                                 <Label htmlFor="firstname" md={2}>First Name</Label>
                                 <Col md={10}>
-                                    <Control.Text model=".firstname" id="firstname" name="firstname"
+                                    <Control.text model=".firstname" id="firstname" name="firstname"
                                         placeholder="First Name"
                                         className = "form-control"
                                         validators={{
@@ -91,7 +91,7 @@ class Contact extends React.Component {
                             <Row className="form-group">
                                 <Label htmlFor="lastname" md={2}>Last Name</Label>
                                 <Col md={10}>
-                                    <Control.Text model=".lastname" id="lastname" name="lastname"
+                                    <Control.text model=".lastname" id="lastname" name="lastname"
                                         placeholder="Last Name"
                                         className = "form-control" 
                                         validators={{
@@ -112,7 +112,7 @@ class Contact extends React.Component {
                             <Row className="form-group">
                                 <Label htmlFor="telnum" md={2}>Contact Tel.</Label>
                                 <Col md={10}>
-                                    <Control.Text model=".telnum" id="telnum" name="telnum"
+                                    <Control.text model=".telnum" id="telnum" name="telnum"
                                         placeholder="Tel. Number"
                                         className = "form-control"
                                         validators={{
@@ -134,7 +134,7 @@ class Contact extends React.Component {
                             <Row className="form-group">
                                 <Label htmlFor="email" md={2}>Email</Label>
                                 <Col md={10}>
-                                    <Control.Text model=".email" id="email" name="email"
+                                    <Control.text model=".email" id="email" name="email"
                                         placeholder="Email"
                                         className = "form-control" 
                                         validators={{
@@ -155,24 +155,24 @@ class Contact extends React.Component {
                                 <Col md={{size: 6, offset: 2}}>
                                     <div className="form-check">
                                         <Label check>
-                                            <Control.Checkbox model=".agree" name="agree"
+                                            <Control.checkbox model=".agree" name="agree"
                                                 className="form-check-input" /> {' '}
                                                 <strong>May we contact you?</strong>
                                         </Label>
                                     </div>
                                 </Col>
                                 <Col md={{size: 3, offset: 1}}>
-                                    <Control.Select model=".contactType" name="contactType"
+                                    <Control.select model=".contactType" name="contactType"
                                         className="form-control" >
                                         <option>Tel.</option>
                                         <option>Email</option>
-                                    </Control.Select>
+                                    </Control.select>
                                 </Col>
                             </Row>
                             <Row className="form-group">
                                 <Label htmlFor="message" md={2}>Your Feedback</Label>
                                 <Col md={10}>
-                                    <Control.Textarea model=".message" id="message" name="message"
+                                    <Control.textarea model=".message" id="message" name="message"
                                         rows="12" className="form-control"/>
                                 </Col>
                             </Row>
